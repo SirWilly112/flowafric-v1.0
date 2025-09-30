@@ -3,6 +3,12 @@
 import { useState } from "react";
 import Script from "next/script";
 
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
+
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
